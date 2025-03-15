@@ -12,7 +12,7 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="./logo.png?height=40&width=40"
+            src="/logo.png?height=40&width=40"
             alt="ICEG Logo"
             width={40}
             height={40}
