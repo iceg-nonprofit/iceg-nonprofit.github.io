@@ -1,11 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export", // Enable static export mode
-  basePath: "/iceg", // Path for GitHub Pages
-  assetPrefix: "/iceg", // Prefix for static assets
+  output: "export",
+  basePath: "/iceg", // Ensure this matches your repo name!
+  assetPrefix: "/iceg/", // Trailing slash is important!
   eslint: {
-    ignoreDuringBuilds: true, // Optionally ignore ESLint during builds
+    ignoreDuringBuilds: true,
   },
 };
 
