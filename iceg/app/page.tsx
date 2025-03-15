@@ -1,77 +1,30 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Calendar, Heart, Users, CheckCircle, Award, BookOpen } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Calendar,
+  Heart,
+  Users,
+  CheckCircle,
+  Award,
+  BookOpen,
+} from "lucide-react";
+import { SiteHeader } from "@/components/site-header";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-white border-b sticky top-0 z-10">
-        <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="relative w-10 h-10 overflow-hidden rounded-full bg-orange-100 flex items-center justify-center">
-              <span className="text-orange-600 font-bold text-lg">IC</span>
-            </div>
-            <span className="font-bold text-xl">ICEG</span>
-          </Link>
-          <nav className="hidden md:flex gap-6">
-            <Link
-              href="/"
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              About Us
-            </Link>
-            <Link
-              href="/contact"
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              Contact
-            </Link>
-            <Link
-              href="/donate"
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              Donate
-            </Link>
-          </nav>
-          <Button
-            asChild
-            className="hidden md:inline-flex bg-orange-600 hover:bg-orange-500"
-          >
-            <Link href="/donate">Donate Now</Link>
-          </Button>
-          <Button variant="outline" size="icon" className="md:hidden">
-            <span className="sr-only">Toggle menu</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-            >
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
-          </Button>
-        </div>
-      </header>
+      <SiteHeader />
       <main className="flex-1">
         {/* Hero Section with Gradient Overlay */}
         <section className="relative w-full py-12 md:py-24 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            
+            <Image
+              src="/placeholder.svg?height=800&width=1600"
+              alt="Indian Cultural Celebration"
+              fill
+              className="object-cover"
+            />
             <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-orange-800/60"></div>
           </div>
           <div className="container relative z-10 px-4 md:px-6">
@@ -90,7 +43,7 @@ export default function Home() {
                   <Button
                     asChild
                     size="lg"
-                    className="bg-orange-600 hover:bg-orange-500"
+                    className="bg-orange-600 hover:bg-orange-700"
                   >
                     <Link href="/donate">Donate Now</Link>
                   </Button>
@@ -98,7 +51,7 @@ export default function Home() {
                     asChild
                     variant="outline"
                     size="lg"
-                    className="bg-white/10 text-white border-white/20 hover:bg-white/20 hover:text-white"
+                    className="bg-white/10 text-white border-white/20 hover:bg-white/20"
                   >
                     <Link href="/about">Learn More</Link>
                   </Button>
@@ -456,4 +409,3 @@ export default function Home() {
     </div>
   );
 }
-

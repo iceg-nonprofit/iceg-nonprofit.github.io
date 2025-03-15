@@ -1,36 +1,46 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export function SiteHeader() {
   return (
-    <header className="bg-white border-b sticky top-0 z-10">
+    <header className="bg-white/95 backdrop-blur-sm border-b sticky top-0 z-50 shadow-sm">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="/placeholder.svg?height=40&width=40"
-            alt="ICEG Logo"
-            width={40}
-            height={40}
-            className="rounded-full"
-          />
+          <div className="relative w-10 h-10 overflow-hidden rounded-full bg-orange-100 flex items-center justify-center">
+            <span className="text-orange-600 font-bold text-lg">IC</span>
+          </div>
           <span className="font-bold text-xl">ICEG</span>
         </Link>
         <nav className="hidden md:flex gap-6">
-          <Link href="/" className="text-sm font-medium hover:underline underline-offset-4">
+          <Link
+            href="/"
+            className="text-sm font-medium hover:underline underline-offset-4"
+          >
             Home
           </Link>
-          <Link href="/about" className="text-sm font-medium hover:underline underline-offset-4">
+          <Link
+            href="/about"
+            className="text-sm font-medium hover:underline underline-offset-4"
+          >
             About Us
           </Link>
-          <Link href="/contact" className="text-sm font-medium hover:underline underline-offset-4">
+          <Link
+            href="/contact"
+            className="text-sm font-medium hover:underline underline-offset-4"
+          >
             Contact
           </Link>
-          <Link href="/donate" className="text-sm font-medium hover:underline underline-offset-4">
+          <Link
+            href="/donate"
+            className="text-sm font-medium hover:underline underline-offset-4"
+          >
             Donate
           </Link>
         </nav>
-        <Button asChild className="hidden md:inline-flex bg-orange-600 hover:bg-orange-700">
+        <Button
+          asChild
+          className="hidden md:inline-flex bg-orange-600 hover:bg-orange-700"
+        >
           <Link href="/donate">Donate Now</Link>
         </Button>
         <Button variant="outline" size="icon" className="md:hidden">
@@ -54,6 +64,5 @@ export function SiteHeader() {
         </Button>
       </div>
     </header>
-  )
+  );
 }
-

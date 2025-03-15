@@ -1,58 +1,20 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Heart, BookOpen, Users, CheckCircle } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Heart, BookOpen, Users, CheckCircle } from "lucide-react";
+import { SiteHeader } from "@/components/site-header";
 
 export default function DonatePage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-white border-b sticky top-0 z-10">
-        <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="relative w-10 h-10 overflow-hidden rounded-full bg-orange-100 flex items-center justify-center">
-              <span className="text-orange-600 font-bold text-lg">IC</span>
-            </div>
-            <span className="font-bold text-xl">ICEG</span>
-          </Link>
-          <nav className="hidden md:flex gap-6">
-            <Link href="/" className="text-sm font-medium hover:underline underline-offset-4">
-              Home
-            </Link>
-            <Link href="/about" className="text-sm font-medium hover:underline underline-offset-4">
-              About Us
-            </Link>
-            <Link href="/contact" className="text-sm font-medium hover:underline underline-offset-4">
-              Contact
-            </Link>
-            <Link href="/donate" className="text-sm font-medium hover:underline underline-offset-4">
-              Donate
-            </Link>
-          </nav>
-          <Button asChild className="hidden md:inline-flex bg-orange-600 hover:bg-orange-700">
-            <Link href="/donate">Donate Now</Link>
-          </Button>
-          <Button variant="outline" size="icon" className="md:hidden">
-            <span className="sr-only">Toggle menu</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-            >
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
-          </Button>
-        </div>
-      </header>
+      <SiteHeader />
       <main className="flex-1">
         {/* Hero Section with Gradient Overlay */}
         <section className="relative w-full py-12 md:py-24 lg:py-32 overflow-hidden">
@@ -75,11 +37,16 @@ export default function DonatePage() {
                   Support Our Mission
                 </h1>
                 <p className="max-w-[900px] text-orange-50 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Your donation helps us celebrate Indian culture and support STEM education through the AIF Foundation.
+                  Your donation helps us celebrate Indian culture and support
+                  STEM education through the AIF Foundation.
                 </p>
               </div>
               <div className="pt-4">
-                <Button asChild size="lg" className="bg-white text-orange-600 hover:bg-orange-50">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-white text-orange-600 hover:bg-orange-50"
+                >
                   <a href="#donate-form">Donate Now</a>
                 </Button>
               </div>
@@ -93,7 +60,9 @@ export default function DonatePage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div className="p-4">
                 <div className="text-3xl font-bold text-orange-600">100%</div>
-                <div className="text-sm text-gray-500">Funds to AIF Foundation</div>
+                <div className="text-sm text-gray-500">
+                  Funds to AIF Foundation
+                </div>
               </div>
               <div className="p-4">
                 <div className="text-3xl font-bold text-orange-600">70+</div>
@@ -117,27 +86,35 @@ export default function DonatePage() {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-50 rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
           <div className="container px-4 md:px-6 relative">
-            <div className="grid gap-10 lg:grid-cols-2">
+            <div className="grid gap-10 ">
               <div className="space-y-8">
-                <div>
+                <div className="text-center">
                   <div className="inline-flex items-center justify-center p-2 bg-orange-100 rounded-full text-orange-600 mb-4">
                     <Heart className="h-6 w-6" />
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter mb-4">Make a Difference</h2>
+                  <h2 className="text-3xl font-bold tracking-tighter mb-4">
+                    Make a Difference
+                  </h2>
                   <div className="relative">
                     <div className="absolute -inset-1 bg-gradient-to-r from-orange-100 to-orange-50 rounded-lg blur opacity-25"></div>
                     <div className="relative bg-white p-6 rounded-lg shadow-sm border border-orange-100">
                       <p className="text-gray-700">
-                        All funds raised through donations or drives will be donated to the AIF Foundation, dedicated to
-                        STEM education opportunities.
+                        All funds raised through donations or drives will be
+                        donated to the AIF Foundation, dedicated to STEM
+                        education opportunities.
                       </p>
                     </div>
                   </div>
-                  <p className="text-gray-500 mt-4 mb-4">Your contribution helps us:</p>
+                  <p className="text-gray-500 mt-4 mb-4">
+                    Your contribution helps us:
+                  </p>
                   <ul className="space-y-3">
                     <li className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-orange-100">
                       <CheckCircle className="h-5 w-5 text-orange-600 flex-shrink-0" />
-                      <span>Support STEM education programs for underprivileged students</span>
+                      <span>
+                        Support STEM education programs for underprivileged
+                        students
+                      </span>
                     </li>
                     <li className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-green-100">
                       <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
@@ -149,58 +126,40 @@ export default function DonatePage() {
                     </li>
                     <li className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-purple-100">
                       <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
-                      <span>Organize cultural events and educational workshops</span>
+                      <span>
+                        Organize cultural events and educational workshops
+                      </span>
                     </li>
                   </ul>
                 </div>
                 <Card>
                   <CardHeader>
                     <CardTitle>Our Impact</CardTitle>
-                    <CardDescription>See how your donations make a difference</CardDescription>
+                    <CardDescription>
+                      See how your donations make a difference
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="grid gap-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="flex flex-col items-center justify-center space-y-2 rounded-lg border bg-background p-4 shadow-sm">
-                        <div className="text-3xl font-bold text-orange-600">100%</div>
-                        <div className="text-sm text-gray-500 text-center">of donations go to the AIF Foundation</div>
+                        <div className="text-3xl font-bold text-orange-600">
+                          100%
+                        </div>
+                        <div className="text-sm text-gray-500 text-center">
+                          of donations go to the AIF Foundation
+                        </div>
                       </div>
                       <div className="flex flex-col items-center justify-center space-y-2 rounded-lg border bg-background p-4 shadow-sm">
-                        <div className="text-3xl font-bold text-green-600">70+</div>
-                        <div className="text-sm text-gray-500 text-center">active members volunteering</div>
+                        <div className="text-3xl font-bold text-green-600">
+                          70+
+                        </div>
+                        <div className="text-sm text-gray-500 text-center">
+                          active members volunteering
+                        </div>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-              </div>
-              <div id="donate-form" className="flex flex-col items-center">
-                <div className="w-full max-w-md">
-                  <div className="relative">
-                    <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-orange-100 to-green-100 blur-lg opacity-50"></div>
-                    <div className="relative rounded-lg border bg-background p-6 shadow-md">
-                      <div className="flex items-center justify-center mb-4">
-                        <div className="inline-flex items-center justify-center p-2 bg-orange-100 rounded-full text-orange-600">
-                          <Heart className="h-6 w-6" />
-                        </div>
-                      </div>
-                      <h3 className="text-xl font-bold mb-4 text-center">Donate Now</h3>
-                      <div className="aspect-square w-full">
-                        <iframe
-                          src="https://hcb.hackclub.com/donations/start/indian-cultural-enrichment-group"
-                          style={{ border: "none" }}
-                          name="donateFrame"
-                          scrolling="yes"
-                          frameBorder="0"
-                          marginHeight="0"
-                          marginWidth="0"
-                          height="512"
-                          width="100%"
-                          allowFullScreen
-                          className="w-full h-full rounded-lg"
-                        ></iframe>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -215,8 +174,9 @@ export default function DonatePage() {
             <div className="max-w-3xl mx-auto text-center">
               <div className="text-5xl text-orange-300 font-serif mb-6">"</div>
               <blockquote className="text-xl md:text-2xl font-medium text-gray-700 mb-6">
-                Every donation, no matter how small, helps us make a significant impact on STEM education and cultural
-                awareness. Together, we can build a brighter future.
+                Every donation, no matter how small, helps us make a significant
+                impact on STEM education and cultural awareness. Together, we
+                can build a brighter future.
               </blockquote>
               <div className="flex items-center justify-center gap-2">
                 <div className="relative w-12 h-12 overflow-hidden rounded-full bg-orange-100 flex items-center justify-center">
@@ -239,9 +199,12 @@ export default function DonatePage() {
                 <Users className="h-6 w-6" />
               </div>
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter">Other Ways to Support</h2>
+                <h2 className="text-3xl font-bold tracking-tighter">
+                  Other Ways to Support
+                </h2>
                 <p className="max-w-[900px] text-gray-500 md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
-                  There are many ways you can help support our mission beyond monetary donations.
+                  There are many ways you can help support our mission beyond
+                  monetary donations.
                 </p>
               </div>
             </div>
@@ -255,9 +218,13 @@ export default function DonatePage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-gray-500">
-                    Join our team of volunteers and help at cultural events and educational workshops.
+                    Join our team of volunteers and help at cultural events and
+                    educational workshops.
                   </p>
-                  <Button asChild className="w-full bg-orange-600 hover:bg-orange-700">
+                  <Button
+                    asChild
+                    className="w-full bg-orange-600 hover:bg-orange-700"
+                  >
                     <Link href="/contact#volunteer">Sign Up to Volunteer</Link>
                   </Button>
                 </CardContent>
@@ -271,9 +238,13 @@ export default function DonatePage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-gray-500">
-                    Share our mission with your friends, family, and social networks to help us reach more people.
+                    Share our mission with your friends, family, and social
+                    networks to help us reach more people.
                   </p>
-                  <Button variant="outline" className="w-full border-green-200 hover:bg-green-50">
+                  <Button
+                    variant="outline"
+                    className="w-full border-green-200 hover:bg-green-50"
+                  >
                     Share on Social Media
                   </Button>
                 </CardContent>
@@ -287,9 +258,14 @@ export default function DonatePage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-gray-500">
-                    If your company is interested in partnering with us, please get in touch to discuss opportunities.
+                    If your company is interested in partnering with us, please
+                    get in touch to discuss opportunities.
                   </p>
-                  <Button asChild variant="outline" className="w-full border-blue-200 hover:bg-blue-50">
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full border-blue-200 hover:bg-blue-50"
+                  >
                     <Link href="/contact">Contact Us</Link>
                   </Button>
                 </CardContent>
@@ -303,16 +279,28 @@ export default function DonatePage() {
           <div className="container px-4 md:px-6">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-10">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Ready to make a difference?</h2>
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+                  Ready to make a difference?
+                </h2>
                 <p className="max-w-[600px] text-orange-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Your support helps us celebrate Indian culture and provide STEM education opportunities.
+                  Your support helps us celebrate Indian culture and provide
+                  STEM education opportunities.
                 </p>
               </div>
               <div className="flex gap-4 lg:justify-end">
-                <Button asChild size="lg" className="bg-white text-orange-600 hover:bg-orange-50">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-white text-orange-600 hover:bg-orange-50"
+                >
                   <a href="#donate-form">Donate Now</a>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-orange-700">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-white hover:bg-orange-700"
+                >
                   <Link href="/contact">Contact Us</Link>
                 </Button>
               </div>
@@ -330,8 +318,9 @@ export default function DonatePage() {
               <span className="font-bold">ICEG</span>
             </Link>
             <p className="text-sm text-gray-500">
-              The Indian Cultural Enrichment Group (ICEG) is a legal non-profit made up of high school students
-              dedicated to celebrating and empowering Indian culture.
+              The Indian Cultural Enrichment Group (ICEG) is a legal non-profit
+              made up of high school students dedicated to celebrating and
+              empowering Indian culture.
             </p>
           </div>
           <div className="grid flex-1 grid-cols-2 gap-8 sm:grid-cols-3">
@@ -371,11 +360,15 @@ export default function DonatePage() {
           </div>
         </div>
         <div className="border-t py-6 text-center text-sm">
-          <p>© {new Date().getFullYear()} Indian Cultural Enrichment Group. All rights reserved.</p>
-          <p className="mt-1 text-xs text-gray-500">Fiscally sponsored by HCB</p>
+          <p>
+            © {new Date().getFullYear()} Indian Cultural Enrichment Group. All
+            rights reserved.
+          </p>
+          <p className="mt-1 text-xs text-gray-500">
+            Fiscally sponsored by HCB
+          </p>
         </div>
       </footer>
     </div>
-  )
+  );
 }
-
