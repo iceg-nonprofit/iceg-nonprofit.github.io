@@ -1,7 +1,15 @@
-import Link from "next/link"
-import Image from "next/image"
+"use client";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export function SiteFooter() {
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="border-t bg-gray-50">
       <div className="container flex flex-col gap-4 py-10 md:flex-row md:gap-8 px-4 md:px-6">
@@ -17,8 +25,9 @@ export function SiteFooter() {
             <span className="font-bold">ICEG</span>
           </Link>
           <p className="text-sm text-gray-500">
-            The Indian Cultural Enrichment Group (ICEG) is a legal non-profit made up of high school students dedicated
-            to celebrating and empowering Indian culture.
+            The Indian Cultural Enrichment Group (ICEG) is a legal non-profit
+            made up of high school students dedicated to celebrating and
+            empowering Indian culture.
           </p>
         </div>
         <div className="grid flex-1 grid-cols-2 gap-8 sm:grid-cols-3">
@@ -58,10 +67,12 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t py-6 text-center text-sm">
-        <p>© {new Date().getFullYear()} Indian Cultural Enrichment Group. All rights reserved.</p>
+        <p>
+          © {year ?? "Loading..."} Indian Cultural Enrichment Group. All rights
+          reserved.
+        </p>
         <p className="mt-1 text-xs text-gray-500">Fiscally sponsored by HCB</p>
       </div>
     </footer>
-  )
+  );
 }
-
