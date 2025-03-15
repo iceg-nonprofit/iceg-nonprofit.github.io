@@ -48,7 +48,7 @@ export function SiteFooter() {
               </Link>
             </nav>
           </div>
-          <div className="flex flex-col gap-2 py-10">
+          <div className="flex flex-col gap-2">
             <h3 className="font-semibold">Contact</h3>
             <p className="text-sm">Schaumburg, IL</p>
             <p className="text-sm">icegschaumburg@gmail.com</p>
