@@ -7,8 +7,10 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Indian Cultural Enrichment Group",
-  description: "A non-profit organization dedicated to celebrating and empowering Indian culture.",
-}
+  description:
+    "A non-profit organization dedicated to celebrating and empowering Indian culture.",
+  icons: "/favicon.ico",
+};
 
 export default function RootLayout({
   children,
