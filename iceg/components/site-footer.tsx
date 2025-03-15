@@ -12,11 +12,11 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t bg-gray-50">
-      <div className="container flex flex-col gap-4 py-10 md:flex-row md:gap-8 px-4 md:px-6">
-        <div className="flex flex-col gap-2 md:gap-4 md:w-1/3">
+      <div className="container flex flex-col gap-4 py-10 md:flex-row md:gap-5 px-4 md:px-6">
+        <div className="flex flex-col gap-2 md:gap-4 md:w-1/2">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/placeholder.svg?height=40&width=40"
+              src="/logo.png?height=40&width=40"
               alt="ICEG Logo"
               width={40}
               height={40}
@@ -30,7 +30,7 @@ export function SiteFooter() {
             empowering Indian culture.
           </p>
         </div>
-        <div className="grid flex-1 grid-cols-2 gap-8 sm:grid-cols-3">
+        <div className="grid flex-1 grid-cols-2 sm:grid-cols-2">
           <div className="flex flex-col gap-2">
             <h3 className="font-semibold">Pages</h3>
             <nav className="flex flex-col gap-2">
@@ -48,21 +48,10 @@ export function SiteFooter() {
               </Link>
             </nav>
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 py-10">
             <h3 className="font-semibold">Contact</h3>
             <p className="text-sm">Schaumburg, IL</p>
-            <p className="text-sm">info@iceg.org</p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <h3 className="font-semibold">Legal</h3>
-            <nav className="flex flex-col gap-2">
-              <Link href="#" className="text-sm hover:underline">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="text-sm hover:underline">
-                Terms of Service
-              </Link>
-            </nav>
+            <p className="text-sm">icegschaumburg@gmail.com</p>
           </div>
         </div>
       </div>

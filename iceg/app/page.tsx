@@ -20,13 +20,7 @@ export default function Home() {
         {/* Hero Section with Gradient Overlay */}
         <section className="relative w-full py-12 md:py-24 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <Image
-              src="/placeholder.svg?height=800&width=1600"
-              alt="Indian Cultural Celebration"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-orange-800/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/100 to-green-600/70"></div>
           </div>
           <div className="container relative z-10 px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
@@ -44,15 +38,20 @@ export default function Home() {
                   <Button
                     asChild
                     size="lg"
-                    className="bg-orange-600 hover:bg-orange-700"
+                    className="bg-green-600 hover:bg-green-500"
                   >
-                    <Link href="/donate">Donate Now</Link>
+                    <Link
+                      href="https://hcb.hackclub.com/donations/start/indian-cultural-enrichment-group"
+                      target="_blank"
+                    >
+                      Donate Now
+                    </Link>
                   </Button>
                   <Button
                     asChild
                     variant="outline"
                     size="lg"
-                    className="bg-white/10 text-white border-white/20 hover:bg-white/20"
+                    className="bg-white/10 text-white border-white/20 hover:bg-white/30 hover:text-white"
                   >
                     <Link href="/about">Learn More</Link>
                   </Button>
@@ -61,7 +60,7 @@ export default function Home() {
               <div className="hidden lg:flex items-center justify-center">
                 {/* Decorative element */}
                 <div className="relative w-64 h-64 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
-                  <div className="absolute inset-0 border-4 border-dashed border-orange-200/30 rounded-full animate-[spin_30s_linear_infinite]"></div>
+                  <div className="absolute inset-0 border-4 border-dashed border-orange-600/100 rounded-full animate-[spin_30s_linear_infinite]"></div>
                   <div className="text-white text-center p-6">
                     <div className="text-4xl font-bold">70+</div>
                     <div className="text-sm mt-2">Active Members</div>
@@ -189,10 +188,10 @@ export default function Home() {
         </section>
 
         {/* Get Involved Section with Visual Enhancements */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+        <section className="w-full py-12 md:py-12 lg:py-16 bg-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <div className="inline-flex items-center justify-center p-2 bg-blue-100 rounded-full text-blue-600 mb-4">
+              <div className="inline-flex items-center justify-center p-2 bg-blue-100 rounded-full text-blue-600">
                 <Users className="h-6 w-6" />
               </div>
               <div className="space-y-2">
@@ -258,7 +257,7 @@ export default function Home() {
         </section>
 
         {/* Our Impact Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-orange-50">
+        <section className="w-full py-12 md:pb-24 lg:pb-32 bg-gradient-to-b from-white to-orange-50">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="inline-flex items-center justify-center p-2 bg-green-100 rounded-full text-green-600 mb-4">
@@ -328,18 +327,24 @@ export default function Home() {
               <div className="flex gap-4 lg:justify-end">
                 <Button
                   asChild
+                  variant="outline"
                   size="lg"
                   className="bg-white text-orange-600 hover:bg-orange-50"
                 >
-                  <Link href="/donate">Donate Now</Link>
+                  <Link
+                    href="https://hcb.hackclub.com/donations/start/indian-cultural-enrichment-group"
+                    target="_blank"
+                  >
+                    Donate Now
+                  </Link>
                 </Button>
                 <Button
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-orange-700"
+                  className="bg-white text-orange-600 hover:bg-orange-50"
                 >
-                  <Link href="/contact">Contact Us</Link>
+                  <Link href="/contact#contact">Contact Us</Link>
                 </Button>
               </div>
             </div>

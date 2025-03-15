@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Heart, BookOpen, Users, CheckCircle } from "lucide-react";
+import { Heart, BookOpen, Users, CheckCircle, Instagram } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
@@ -20,19 +20,10 @@ export default function DonatePage() {
         {/* Hero Section with Gradient Overlay */}
         <section className="relative w-full py-12 md:py-24 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <Image
-              src="/placeholder.svg?height=800&width=1600"
-              alt="Indian Cultural Celebration"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-orange-800/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/100 to-green-600/70"></div>
           </div>
           <div className="container relative z-10 px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="inline-flex items-center justify-center p-2 bg-white/20 backdrop-blur-sm rounded-full text-white mb-4">
-                <Heart className="h-6 w-6" />
-              </div>
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
                   Support Our Mission
@@ -48,7 +39,12 @@ export default function DonatePage() {
                   size="lg"
                   className="bg-white text-orange-600 hover:bg-orange-50"
                 >
-                  <a href="#donate-form">Donate Now</a>
+                  <a
+                    href="https://hcb.hackclub.com/donations/start/indian-cultural-enrichment-group"
+                    target="_blank"
+                  >
+                    Donate Now
+                  </a>
                 </Button>
               </div>
             </div>
@@ -224,7 +220,8 @@ export default function DonatePage() {
                   </p>
                   <Button
                     asChild
-                    className="w-full bg-orange-600 hover:bg-orange-700"
+                    variant="outline"
+                    className="w-full border-orange-200 hover:bg-orange-50"
                   >
                     <Link href="/contact#volunteer">Sign Up to Volunteer</Link>
                   </Button>
@@ -232,7 +229,7 @@ export default function DonatePage() {
               </Card>
               <Card className="overflow-hidden group hover:shadow-md transition-all border-green-100">
                 <div className="h-40 bg-green-100 flex items-center justify-center">
-                  <BookOpen className="h-16 w-16 text-green-600/50" />
+                  <Instagram className="h-16 w-16 text-green-600/50" />
                 </div>
                 <CardHeader>
                   <CardTitle>Spread the Word</CardTitle>
@@ -243,10 +240,16 @@ export default function DonatePage() {
                     networks to help us reach more people.
                   </p>
                   <Button
+                    asChild
                     variant="outline"
                     className="w-full border-green-200 hover:bg-green-50"
                   >
-                    Share on Social Media
+                    <a
+                      href="https://www.instagram.com/iceg_schaumburg/"
+                      target="_blank"
+                    >
+                      Share on Social Media
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
@@ -267,7 +270,7 @@ export default function DonatePage() {
                     variant="outline"
                     className="w-full border-blue-200 hover:bg-blue-50"
                   >
-                    <Link href="/contact">Contact Us</Link>
+                    <Link href="/contact#contact">Contact Us</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -291,18 +294,24 @@ export default function DonatePage() {
               <div className="flex gap-4 lg:justify-end">
                 <Button
                   asChild
+                  variant="outline"
                   size="lg"
                   className="bg-white text-orange-600 hover:bg-orange-50"
                 >
-                  <a href="#donate-form">Donate Now</a>
+                  <Link
+                    href="https://hcb.hackclub.com/donations/start/indian-cultural-enrichment-group"
+                    target="_blank"
+                  >
+                    Donate Now
+                  </Link>
                 </Button>
                 <Button
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-orange-700"
+                  className="bg-white text-orange-600 hover:bg-orange-50"
                 >
-                  <Link href="/contact">Contact Us</Link>
+                  <Link href="/contact#contact">Contact Us</Link>
                 </Button>
               </div>
             </div>

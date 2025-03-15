@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -16,6 +17,56 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
 export default function ContactPage() {
+  async function contactSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "7cacd8bd-2fad-46b0-bab4-59c2397adbb3",
+        name: formData.get("name"),
+        email: formData.get("email"),
+        subject: "Contact Us Form: " + formData.get("subject"),
+        message: formData.get("message"),
+      }),
+    });
+    const result = await response.json();
+    if (result.success) {
+      console.log(result);
+      alert("Thank you");
+      e.currentTarget.reset();
+    }
+  }
+
+  async function volunteerSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "7cacd8bd-2fad-46b0-bab4-59c2397adbb3",
+        name: formData.get("name"),
+        email: formData.get("email"),
+        subject: "Volunteer Us Form",
+        message: formData.get("message"),
+      }),
+    });
+    const result = await response.json();
+    if (result.success) {
+      console.log(result);
+      alert("Thank you");
+      e.currentTarget.reset();
+    }
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
       <SiteHeader />
@@ -23,13 +74,7 @@ export default function ContactPage() {
         {/* Hero Section with Gradient Overlay */}
         <section className="relative w-full py-12 md:py-24 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <Image
-              src="/placeholder.svg?height=800&width=1600"
-              alt="Indian Cultural Celebration"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-orange-800/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/100 to-green-600/70"></div>
           </div>
           <div className="container relative z-10 px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -47,7 +92,10 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Information Section with Enhanced Visual Elements */}
-        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
+        <section
+          id="contact"
+          className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden"
+        >
           <div className="absolute top-0 right-0 w-64 h-64 bg-orange-50 rounded-full -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-50 rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
@@ -55,12 +103,14 @@ export default function ContactPage() {
             <div className="grid gap-10 lg:grid-cols-2">
               <div className="space-y-8">
                 <div>
-                  <div className="inline-flex items-center justify-center p-2 bg-orange-100 rounded-full text-orange-600 mb-4">
-                    <Send className="h-6 w-6" />
+                  <div className="text-center">
+                    <div className="inline-flex items-center justify-center p-2 bg-orange-100 rounded-full text-orange-600 mb-4">
+                      <Send className="h-6 w-6" />
+                    </div>
+                    <h2 className="text-3xl font-bold tracking-tighter mb-4">
+                      Get In Touch
+                    </h2>
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter mb-4">
-                    Get In Touch
-                  </h2>
                   <p className="text-gray-500">
                     Have questions about our organization, events, or how to get
                     involved? Reach out to us using any of the methods below.
@@ -73,7 +123,9 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold">Email</h3>
-                      <p className="text-sm text-gray-500">info@iceg.org</p>
+                      <p className="text-sm text-gray-500">
+                        icegschaumburg@gmail.com
+                      </p>
                       <p className="text-sm text-gray-500 mt-1">
                         We'll respond as soon as possible
                       </p>
@@ -88,18 +140,6 @@ export default function ContactPage() {
                       <p className="text-sm text-gray-500">(123) 456-7890</p>
                       <p className="text-sm text-gray-500 mt-1">
                         Monday-Friday, 9am-5pm CST
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-blue-100 transition-all hover:shadow-md">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-600 flex-shrink-0">
-                      <MapPin className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold">Location</h3>
-                      <p className="text-sm text-gray-500">Schaumburg, IL</p>
-                      <p className="text-sm text-gray-500 mt-1">
-                        Based in the Chicago metropolitan area
                       </p>
                     </div>
                   </div>
@@ -118,11 +158,12 @@ export default function ContactPage() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <form className="grid gap-4">
+                    <form className="grid gap-4" onSubmit={contactSubmit}>
                       <div className="grid gap-2">
                         <Label htmlFor="name">Name</Label>
                         <Input
                           id="name"
+                          name="name"
                           placeholder="Enter your name"
                           className="border-gray-200"
                         />
@@ -131,6 +172,7 @@ export default function ContactPage() {
                         <Label htmlFor="email">Email</Label>
                         <Input
                           id="email"
+                          name="email"
                           type="email"
                           placeholder="Enter your email"
                           className="border-gray-200"
@@ -140,6 +182,7 @@ export default function ContactPage() {
                         <Label htmlFor="subject">Subject</Label>
                         <Input
                           id="subject"
+                          name="subject"
                           placeholder="Enter the subject"
                           className="border-gray-200"
                         />
@@ -148,6 +191,7 @@ export default function ContactPage() {
                         <Label htmlFor="message">Message</Label>
                         <Textarea
                           id="message"
+                          name="message"
                           placeholder="Enter your message"
                           className="min-h-[150px] border-gray-200"
                         />
@@ -169,7 +213,7 @@ export default function ContactPage() {
         {/* Volunteer Section with Enhanced Visual Elements */}
         <section
           id="volunteer"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-orange-50"
+          className="w-full py-12 md:py-24 lg:py-16 bg-gradient-to-b from-white to-orange-50"
         >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-10">
@@ -197,12 +241,13 @@ export default function ContactPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form className="grid gap-4">
+                  <form className="grid gap-4" onSubmit={volunteerSubmit}>
                     <div className="grid gap-2">
                       <Label htmlFor="volunteer-name">Full Name</Label>
                       <Input
                         id="volunteer-name"
-                        placeholder="Enter your full name"
+                        name="name"
+                        placeholder="Enter your name"
                         className="border-gray-200"
                       />
                     </div>
@@ -210,17 +255,9 @@ export default function ContactPage() {
                       <Label htmlFor="volunteer-email">Email</Label>
                       <Input
                         id="volunteer-email"
+                        name="email"
                         type="email"
                         placeholder="Enter your email"
-                        className="border-gray-200"
-                      />
-                    </div>
-                    <div className="grid gap-2">
-                      <Label htmlFor="volunteer-phone">Phone Number</Label>
-                      <Input
-                        id="volunteer-phone"
-                        type="tel"
-                        placeholder="Enter your phone number"
                         className="border-gray-200"
                       />
                     </div>
@@ -230,6 +267,7 @@ export default function ContactPage() {
                       </Label>
                       <Textarea
                         id="volunteer-interests"
+                        name="message"
                         placeholder="Tell us which types of events you're interested in volunteering for"
                         className="border-gray-200"
                       />
@@ -243,38 +281,6 @@ export default function ContactPage() {
                   </form>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Map/Location Section */}
-        <section className="w-full py-12 md:py-24 bg-white border-t">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-10">
-              <div className="inline-flex items-center justify-center p-2 bg-green-100 rounded-full text-green-600 mb-4">
-                <MapPin className="h-6 w-6" />
-              </div>
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter">Find Us</h2>
-                <p className="max-w-[600px] text-gray-500">
-                  We're based in Schaumburg, IL and active throughout the
-                  Chicago metropolitan area
-                </p>
-              </div>
-            </div>
-            <div className="relative rounded-xl overflow-hidden border shadow-lg h-[400px]">
-              <Image
-                src="/placeholder.svg?height=400&width=1200"
-                alt="Map location"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-white p-4 rounded-lg shadow-lg">
-                  <p className="font-bold">Indian Cultural Enrichment Group</p>
-                  <p className="text-sm text-gray-500">Schaumburg, IL</p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -295,18 +301,24 @@ export default function ContactPage() {
               <div className="flex gap-4 lg:justify-end">
                 <Button
                   asChild
+                  variant="outline"
                   size="lg"
                   className="bg-white text-orange-600 hover:bg-orange-50"
                 >
-                  <Link href="/donate">Donate Now</Link>
+                  <Link
+                    href="https://hcb.hackclub.com/donations/start/indian-cultural-enrichment-group"
+                    target="_blank"
+                  >
+                    Donate Now
+                  </Link>
                 </Button>
                 <Button
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-orange-700"
+                  className="bg-white text-orange-600 hover:bg-orange-50"
                 >
-                  <Link href="/contact">Contact Us</Link>
+                  <Link href="/contact#contact">Contact Us</Link>
                 </Button>
               </div>
             </div>

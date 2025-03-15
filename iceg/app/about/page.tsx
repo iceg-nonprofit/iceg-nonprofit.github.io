@@ -21,13 +21,7 @@ export default function AboutPage() {
         {/* Hero Section with Gradient Overlay */}
         <section className="relative w-full py-12 md:py-24 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <Image
-              src="/placeholder.svg?height=800&width=1600"
-              alt="Indian Cultural Celebration"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-orange-800/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/100 to-green-600/70"></div>
           </div>
           <div className="container relative z-10 px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -45,18 +39,20 @@ export default function AboutPage() {
         </section>
 
         {/* Mission Section with Visual Enhancements */}
-        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
+        <section className="w-full py-12 md:py-12 lg:py-18 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-orange-50 rounded-full -translate-y-1/2 translate-x-1/2"></div>
 
           <div className="container px-4 md:px-6 relative">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="space-y-4">
-                <div className="inline-flex items-center justify-center p-2 bg-orange-100 rounded-full text-orange-600 mb-4">
-                  <Heart className="h-6 w-6" />
+                <div className="text-center">
+                  <div className="inline-flex text-center items-center justify-center p-2 bg-orange-100 rounded-full text-orange-600 mb-4">
+                    <Heart className="h-6 w-6" />
+                  </div>
+                  <h2 className="text-3xl font-bold tracking-tighter">
+                    Our Mission
+                  </h2>
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter">
-                  Our Mission
-                </h2>
                 <div className="relative">
                   <div className="absolute -inset-1 bg-gradient-to-r from-orange-100 to-orange-50 rounded-lg blur opacity-25"></div>
                   <div className="relative bg-white p-6 rounded-lg shadow-sm border border-orange-100">
@@ -186,7 +182,7 @@ export default function AboutPage() {
         </section>
 
         {/* Community Section with Enhanced Visual Elements */}
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12 md:py-24 lg:py-16">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex items-center justify-center">
@@ -204,12 +200,14 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="space-y-6">
-                <div className="inline-flex items-center justify-center p-2 bg-green-100 rounded-full text-green-600 mb-4">
-                  <Globe className="h-6 w-6" />
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center p-2 bg-green-100 rounded-full text-green-600 mb-4">
+                    <Globe className="h-6 w-6" />
+                  </div>
+                  <h2 className="text-3xl font-bold tracking-tighter">
+                    Our Community
+                  </h2>
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter">
-                  Our Community
-                </h2>
                 <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border border-orange-100 transition-all hover:shadow-md">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-100 text-orange-600 flex-shrink-0">
                     <Users className="h-6 w-6" />
@@ -316,7 +314,12 @@ export default function AboutPage() {
                 size="lg"
                 className="bg-orange-600 hover:bg-orange-700"
               >
-                <Link href="/donate">Donate Now</Link>
+                <Link
+                  href="https://hcb.hackclub.com/donations/start/indian-cultural-enrichment-group"
+                  target="_blank"
+                >
+                  Donate Now
+                </Link>
               </Button>
             </div>
           </div>
@@ -338,18 +341,24 @@ export default function AboutPage() {
               <div className="flex gap-4 lg:justify-end">
                 <Button
                   asChild
+                  variant="outline"
                   size="lg"
                   className="bg-white text-orange-600 hover:bg-orange-50"
                 >
-                  <Link href="/donate">Donate Now</Link>
+                  <Link
+                    href="https://hcb.hackclub.com/donations/start/indian-cultural-enrichment-group"
+                    target="_blank"
+                  >
+                    Donate Now
+                  </Link>
                 </Button>
                 <Button
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-orange-700"
+                  className="bg-white text-orange-600 hover:bg-orange-50"
                 >
-                  <Link href="/contact">Contact Us</Link>
+                  <Link href="/contact#contact">Contact Us</Link>
                 </Button>
               </div>
             </div>
