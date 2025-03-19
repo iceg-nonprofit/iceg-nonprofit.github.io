@@ -171,7 +171,7 @@ export default function AboutPage() {
                   <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-blue-100 to-green-100 blur-lg opacity-50"></div>
                   <div className="relative rounded-xl overflow-hidden border shadow-lg">
                     <Image
-                      src="/placeholder.svg?height=400&width=600"
+                      src="/group2.JPG?height=400&width=600"
                       alt="ICEG Community"
                       width={600}
                       height={400}

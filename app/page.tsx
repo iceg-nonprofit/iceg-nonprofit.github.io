@@ -80,9 +80,9 @@ export default function Home() {
                 <div className="text-sm text-gray-500">Active Members</div>
               </div>
               <div className="p-4">
-                <div className="text-3xl font-bold text-orange-600">100%</div>
+                <div className="text-3xl font-bold text-orange-600">$2,500</div>
                 <div className="text-sm text-gray-500">
-                  Funds to AIF Foundation
+                  Funds Raised
                 </div>
               </div>
               <div className="p-4">
