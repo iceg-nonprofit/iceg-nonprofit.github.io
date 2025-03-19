@@ -77,11 +77,11 @@ export default function AboutPage() {
                   <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-orange-100 to-green-100 blur-lg opacity-50"></div>
                   <div className="relative rounded-xl overflow-hidden border shadow-lg">
                     <Image
-                      src="/placeholder.svg?height=400&width=600"
+                      src="/kids.jpg?height=400&width=800"
                       alt="ICEG Mission"
-                      width={600}
+                      width={800}
                       height={400}
-                      className="w-full h-auto object-cover"
+                      className=" h-auto object-cover"
                     />
                   </div>
                 </div>
@@ -107,76 +107,57 @@ export default function AboutPage() {
                 Cultural Enrichment Group
               </p>
             </div>
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <Card className="overflow-hidden group hover:shadow-md transition-all">
-                <div className="aspect-square relative overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Ayush Patel"
-                    fill
-                    className="object-cover transition-transform group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-                    <div className="p-4 text-white">
-                      <p className="font-medium">Co-Founder</p>
+
+            {/* Center the grid using flex */}
+            <div className="flex justify-center">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2 justify-items-center">
+                <Card className="overflow-hidden group hover:shadow-md transition-all w-80">
+                  <div className="aspect-square relative overflow-hidden">
+                    <Image
+                      src="/ayush.JPG?height=100&width=100"
+                      alt="Ayush Patel"
+                      fill
+                      className="object-cover transition-transform group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                      <div className="p-4 text-white">
+                        <p className="font-medium">Co-Founder</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold">Ayush Patel</h3>
-                  <p className="text-sm text-gray-500 mt-2">Co-Founder</p>
-                  <p className="mt-4 text-gray-500">
-                    Passionate about promoting Indian culture and creating
-                    educational opportunities for students.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="overflow-hidden group hover:shadow-md transition-all">
-                <div className="aspect-square relative overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Abraham Thomas"
-                    fill
-                    className="object-cover transition-transform group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-                    <div className="p-4 text-white">
-                      <p className="font-medium">Co-Founder</p>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold">Ayush Patel</h3>
+                    <p className="text-sm text-gray-500 mt-2">Co-Founder</p>
+                    <p className="mt-4 text-gray-500">
+                      Passionate about promoting Indian culture and creating
+                      educational opportunities for students.
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="overflow-hidden group hover:shadow-md transition-all w-80">
+                  <div className="aspect-square relative overflow-hidden">
+                    <Image
+                      src="/abe.JPG?height=100&width=100"
+                      alt="Abraham Thomas"
+                      fill
+                      className="object-cover transition-transform group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                      <div className="p-4 text-white">
+                        <p className="font-medium">Co-Founder</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold">Abraham Thomas</h3>
-                  <p className="text-sm text-gray-500 mt-2">Co-Founder</p>
-                  <p className="mt-4 text-gray-500">
-                    Dedicated to building bridges between cultures and
-                    supporting STEM education initiatives.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="overflow-hidden group hover:shadow-md transition-all">
-                <div className="aspect-square relative overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Roy Marina"
-                    fill
-                    className="object-cover transition-transform group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-                    <div className="p-4 text-white">
-                      <p className="font-medium">Co-Founder</p>
-                    </div>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold">Roy Marina</h3>
-                  <p className="text-sm text-gray-500 mt-2">Co-Founder</p>
-                  <p className="mt-4 text-gray-500">
-                    Committed to preserving cultural heritage and creating
-                    opportunities for the next generation.
-                  </p>
-                </CardContent>
-              </Card>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold">Abraham Thomas</h3>
+                    <p className="text-sm text-gray-500 mt-2">Co-Founder</p>
+                    <p className="mt-4 text-gray-500">
+                      Dedicated to building bridges between cultures and
+                      supporting STEM education initiatives.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </section>
