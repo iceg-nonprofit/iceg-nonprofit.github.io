@@ -55,9 +55,9 @@ export default function DonatePage() {
           <div className="container px-4 md:px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div className="p-4">
-                <div className="text-3xl font-bold text-orange-600">100%</div>
+                <div className="text-3xl font-bold text-orange-600">$2,500</div>
                 <div className="text-sm text-gray-500">
-                  Funds to AIF Foundation
+                  Funds Raised
                 </div>
               </div>
               <div className="p-4">
