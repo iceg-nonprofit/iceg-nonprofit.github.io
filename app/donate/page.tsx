@@ -180,7 +180,9 @@ export default function DonatePage() {
                 </div>
                 <div className="text-left">
                   <div className="font-medium">Abraham Thomas</div>
-                  <div className="text-sm text-gray-500">Co-Founder, ICEG</div>
+                  <div className="text-sm text-gray-500">
+                    Co-President, ICEG
+                  </div>
                 </div>
               </div>
             </div>

@@ -81,9 +81,7 @@ export default function Home() {
               </div>
               <div className="p-4">
                 <div className="text-3xl font-bold text-orange-600">$2,500</div>
-                <div className="text-sm text-gray-500">
-                  Funds Raised
-                </div>
+                <div className="text-sm text-gray-500">Funds Raised</div>
               </div>
               <div className="p-4">
                 <div className="text-3xl font-bold text-orange-600">2023</div>
@@ -180,7 +178,9 @@ export default function Home() {
                 </div>
                 <div className="text-left">
                   <div className="font-medium">Ayush Patel</div>
-                  <div className="text-sm text-gray-500">Co-Founder, ICEG</div>
+                  <div className="text-sm text-gray-500">
+                    Co-President, ICEG
+                  </div>
                 </div>
               </div>
             </div>

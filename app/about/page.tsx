@@ -90,7 +90,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Founders Section with Enhanced Cards */}
+        {/* Presidents Section with Enhanced Cards */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-orange-50 relative overflow-hidden">
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-50 rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
@@ -100,7 +100,7 @@ export default function AboutPage() {
                 <Users className="h-6 w-6" />
               </div>
               <h2 className="text-3xl font-bold tracking-tighter">
-                Our Founders
+                Our Presidents
               </h2>
               <p className="max-w-[800px] text-gray-500">
                 Meet the passionate individuals who established the Indian
@@ -121,13 +121,13 @@ export default function AboutPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
                       <div className="p-4 text-white">
-                        <p className="font-medium">Co-Founder</p>
+                        <p className="font-medium">Co-President</p>
                       </div>
                     </div>
                   </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold">Ayush Patel</h3>
-                    <p className="text-sm text-gray-500 mt-2">Co-Founder</p>
+                    <p className="text-sm text-gray-500 mt-2">Co-President</p>
                     <p className="mt-4 text-gray-500">
                       Passionate about promoting Indian culture and creating
                       educational opportunities for students.
@@ -144,13 +144,13 @@ export default function AboutPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
                       <div className="p-4 text-white">
-                        <p className="font-medium">Co-Founder</p>
+                        <p className="font-medium">Co-President</p>
                       </div>
                     </div>
                   </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold">Abraham Thomas</h3>
-                    <p className="text-sm text-gray-500 mt-2">Co-Founder</p>
+                    <p className="text-sm text-gray-500 mt-2">Co-President</p>
                     <p className="mt-4 text-gray-500">
                       Dedicated to building bridges between cultures and
                       supporting STEM education initiatives.
