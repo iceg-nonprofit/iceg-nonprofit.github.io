@@ -62,7 +62,7 @@ export default function Home() {
                 <div className="relative w-64 h-64 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
                   <div className="absolute inset-0 border-4 border-dashed border-orange-600/100 rounded-full animate-[spin_30s_linear_infinite]"></div>
                   <div className="text-white text-center p-6">
-                    <div className="text-4xl font-bold">70+</div>
+                    <div className="text-4xl font-bold">85+</div>
                     <div className="text-sm mt-2">Active Members</div>
                   </div>
                 </div>
@@ -76,11 +76,11 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div className="p-4">
-                <div className="text-3xl font-bold text-orange-600">70+</div>
+                <div className="text-3xl font-bold text-orange-600">85+</div>
                 <div className="text-sm text-gray-500">Active Members</div>
               </div>
               <div className="p-4">
-                <div className="text-3xl font-bold text-orange-600">$2,500</div>
+                <div className="text-3xl font-bold text-orange-600">$7,000</div>
                 <div className="text-sm text-gray-500">Funds Raised</div>
               </div>
               <div className="p-4">
