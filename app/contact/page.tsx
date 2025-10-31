@@ -130,7 +130,7 @@ export default function ContactPage() {
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-green-100 transition-all hover:shadow-md">
+                  {/* <div className="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-green-100 transition-all hover:shadow-md">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-600 flex-shrink-0">
                       <Phone className="h-5 w-5" />
                     </div>
@@ -141,7 +141,7 @@ export default function ContactPage() {
                         Monday-Friday, 9am-5pm CST
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="relative">

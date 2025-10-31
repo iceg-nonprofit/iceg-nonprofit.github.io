@@ -137,7 +137,7 @@ export default function Home() {
                 <div className="space-y-2">
                   <h3 className="font-bold">Community Building</h3>
                   <p className="text-sm text-gray-500">
-                    With over 70 members, we're building a strong community of
+                    With over 100 members, we're building a strong community of
                     students passionate about Indian culture.
                   </p>
                 </div>

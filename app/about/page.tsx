@@ -194,7 +194,7 @@ export default function AboutPage() {
                     <Users className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold">Over 70 Members</h3>
+                    <h3 className="font-bold">Over 100 Members</h3>
                     <p className="text-gray-500">
                       A growing community of passionate high school students
                     </p>

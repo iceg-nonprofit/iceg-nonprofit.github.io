@@ -55,13 +55,13 @@ export default function DonatePage() {
           <div className="container px-4 md:px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div className="p-4">
-                <div className="text-3xl font-bold text-orange-600">$2,500</div>
-                <div className="text-sm text-gray-500">
-                  Funds Raised
+                <div className="text-3xl font-bold text-orange-600">
+                  ~$10,000
                 </div>
+                <div className="text-sm text-gray-500">Funds Raised</div>
               </div>
               <div className="p-4">
-                <div className="text-3xl font-bold text-orange-600">70+</div>
+                <div className="text-3xl font-bold text-orange-600">100+</div>
                 <div className="text-sm text-gray-500">Active Members</div>
               </div>
               <div className="p-4">
@@ -147,7 +147,7 @@ export default function DonatePage() {
                       </div>
                       <div className="flex flex-col items-center justify-center space-y-2 rounded-lg border bg-background p-4 shadow-sm">
                         <div className="text-3xl font-bold text-green-600">
-                          70+
+                          100+
                         </div>
                         <div className="text-sm text-gray-500 text-center">
                           active members volunteering
